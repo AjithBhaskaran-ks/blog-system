@@ -1,10 +1,9 @@
 <?php
-
 $conn = mysqli_connect(
-    "HOST",
-    "USER",
-    "PASSWORD",
-    "DATABASE"
+    getenv('MYSQLHOST'),
+    getenv('MYSQLUSER'),
+    getenv('MYSQLPASSWORD'),
+    getenv('MYSQLDATABASE')
 );
 
 if (!$conn) {
